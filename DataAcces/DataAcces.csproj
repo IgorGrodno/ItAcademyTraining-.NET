@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A561BAA-8E6D-4873-96B5-6DA8C00DD396}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAcces</RootNamespace>
+    <AssemblyName>DataAcces</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact.Legacy, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.Legacy.6.2.0\lib\net45\EntityFramework.SqlServerCompact.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="ExpressMapper, Version=1.9.1.0, Culture=neutral, PublicKeyToken=ac363faa09311ba0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expressmapper.1.9.1\lib\net46\ExpressMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.6.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccesModule.cs" />
+    <Compile Include="DataContext.cs" />
+    <Compile Include="Entities\ClaimEntity.cs" />
+    <Compile Include="Entities\ExternalLoginEntity.cs" />
+    <Compile Include="Entities\CommentEntity.cs" />
+    <Compile Include="Entities\GenreEntity.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\PictureEntity.cs" />
+    <Compile Include="Entities\RatingChangeEventEntity.cs" />
+    <Compile Include="Entities\RoleEntity.cs" />
+    <Compile Include="Entities\UserClaimEntity.cs" />
+    <Compile Include="Entities\UserEntity.cs" />
+    <Compile Include="Entities\UserExternalLoginEntity.cs" />
+    <Compile Include="Entities\UserRoleEntity.cs" />
+    <Compile Include="Entities\UserSettingsEntity.cs" />
+    <Compile Include="IUnitOfWorkFactory.cs" />
+    <Compile Include="Migrations\201904010850164_InitialCreate.cs" />
+    <Compile Include="Migrations\201904010850164_InitialCreate.Designer.cs">
+      <DependentUpon>201904010850164_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904050844174_added keyAtribut too userId.cs" />
+    <Compile Include="Migrations\201904050844174_added keyAtribut too userId.Designer.cs">
+      <DependentUpon>201904050844174_added keyAtribut too userId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904050854285_enableConfigFiles.cs" />
+    <Compile Include="Migrations\201904050854285_enableConfigFiles.Designer.cs">
+      <DependentUpon>201904050854285_enableConfigFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904051016228_qwe.cs" />
+    <Compile Include="Migrations\201904051016228_qwe.Designer.cs">
+      <DependentUpon>201904051016228_qwe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904051020135_userentitychanged.cs" />
+    <Compile Include="Migrations\201904051020135_userentitychanged.Designer.cs">
+      <DependentUpon>201904051020135_userentitychanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904051120026_commentConfigChanged.cs" />
+    <Compile Include="Migrations\201904051120026_commentConfigChanged.Designer.cs">
+      <DependentUpon>201904051120026_commentConfigChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904141145489_UserSetingsAdded.cs" />
+    <Compile Include="Migrations\201904141145489_UserSetingsAdded.Designer.cs">
+      <DependentUpon>201904141145489_UserSetingsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904190745012_userSetingsChanged.cs" />
+    <Compile Include="Migrations\201904190745012_userSetingsChanged.Designer.cs">
+      <DependentUpon>201904190745012_userSetingsChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904190837308_userSetingsChanged1.cs" />
+    <Compile Include="Migrations\201904190837308_userSetingsChanged1.Designer.cs">
+      <DependentUpon>201904190837308_userSetingsChanged1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904260755186_commentRatingRemooved.cs" />
+    <Compile Include="Migrations\201904260755186_commentRatingRemooved.Designer.cs">
+      <DependentUpon>201904260755186_commentRatingRemooved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904281853590_userAgeRemooved.cs" />
+    <Compile Include="Migrations\201904281853590_userAgeRemooved.Designer.cs">
+      <DependentUpon>201904281853590_userAgeRemooved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelBuilderConfigurations\ClaimEntityConfiguration.cs" />
+    <Compile Include="ModelBuilderConfigurations\UserEntityConfiguration.cs" />
+    <Compile Include="ModelBuilderConfigurations\RoleEntityConfiguration.cs" />
+    <Compile Include="ModelBuilderConfigurations\ExternalLoginEntityConfiguration.cs" />
+    <Compile Include="ModelBuilderConfigurations\CommentEntityConfiguration.cs" />
+    <Compile Include="ModelBuilderConfigurations\GenreEntityConfiguration.cs" />
+    <Compile Include="ModelBuilderConfigurations\PictureEntityConfiguration.cs" />
+    <Compile Include="ModelBuilderConfigurations\RatingChangrEventEntityConfiguration.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryInterfaces\IUserSetingsRepository.cs" />
+    <Compile Include="Reposytories\ClaimRepository.cs" />
+    <Compile Include="Reposytories\UserClaimRepository.cs" />
+    <Compile Include="Reposytories\UserExternalLoginRepository.cs" />
+    <Compile Include="Reposytories\UserRoleRepository.cs" />
+    <Compile Include="Reposytories\CommentRepository.cs" />
+    <Compile Include="Reposytories\ExternalLoginRepository.cs" />
+    <Compile Include="Reposytories\GenreRepository.cs" />
+    <Compile Include="Reposytories\PictureRepository.cs" />
+    <Compile Include="Reposytories\RatingChangeEventRepository.cs" />
+    <Compile Include="Reposytories\Repository.cs" />
+    <Compile Include="Reposytories\RoleRepository.cs" />
+    <Compile Include="Reposytories\UserRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IClaimRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ICommentRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IExternalLoginRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IGenreRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IPictureRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IRatingChangeEventRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IRoleRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IUserClaimRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IUserExternalLoginRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IUserRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IUserRoleRepository.cs" />
+    <Compile Include="Reposytories\UserSetingRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="UnitOfWorkFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{939A6FFD-2ECC-4ABE-9588-110D554EDADB}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904010850164_InitialCreate.resx">
+      <DependentUpon>201904010850164_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904050844174_added keyAtribut too userId.resx">
+      <DependentUpon>201904050844174_added keyAtribut too userId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904050854285_enableConfigFiles.resx">
+      <DependentUpon>201904050854285_enableConfigFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904051016228_qwe.resx">
+      <DependentUpon>201904051016228_qwe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904051020135_userentitychanged.resx">
+      <DependentUpon>201904051020135_userentitychanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904051120026_commentConfigChanged.resx">
+      <DependentUpon>201904051120026_commentConfigChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904141145489_UserSetingsAdded.resx">
+      <DependentUpon>201904141145489_UserSetingsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904190745012_userSetingsChanged.resx">
+      <DependentUpon>201904190745012_userSetingsChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904190837308_userSetingsChanged1.resx">
+      <DependentUpon>201904190837308_userSetingsChanged1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904260755186_commentRatingRemooved.resx">
+      <DependentUpon>201904260755186_commentRatingRemooved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904281853590_userAgeRemooved.resx">
+      <DependentUpon>201904281853590_userAgeRemooved.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
